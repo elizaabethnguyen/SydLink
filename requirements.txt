@@ -1,0 +1,7 @@
+streamlit
+pandas
+numpy
+protobuf
+gtfs-realtime-bindings
+pydeck
+streamlit-autorefresh
