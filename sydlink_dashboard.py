@@ -57,11 +57,11 @@ else:
     st.success(f"Feed loaded successfully! {len(trip_updates_df)} stop updates found.")
     st.dataframe(combined_df)
 
-    # 🗺️ Show map
+   
     st.subheader("Stop Locations")
     map_data = combined_df.dropna(subset=["stop_lat", "stop_lon"])[["stop_lat", "stop_lon"]].drop_duplicates()
     map_data = map_data.rename(columns={"stop_lat": "lat", "stop_lon": "lon"})
     st.map(map_data)
 
-# 🔁 Auto-refresh every 30 seconds
+
 st_autorefresh(interval=30 * 1000, key="refresh")
